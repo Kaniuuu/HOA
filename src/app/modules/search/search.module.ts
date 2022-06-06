@@ -6,6 +6,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AutoCompleteService } from './resources/services/auto-complete.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [SearchComponent],
   imports: [
@@ -15,6 +19,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    HttpClientModule,
   ],
+  providers: [AutoCompleteService],
 })
 export class SearchModule {}
