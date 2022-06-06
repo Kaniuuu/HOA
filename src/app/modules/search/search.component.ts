@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
         ? this.options.filter(
           (v) => v.toLowerCase().indexOf(val.toLowerCase()) === 0
         )
+          .slice(0,4)
         : []
     )
   );
