@@ -22,9 +22,7 @@ export class SearchComponent implements OnInit {
   constructor(private autoComplete: AutoCompleteService) {}
 
   ngOnInit(): void {
-    this.autoComplete.getAutoCompleteData().subscribe((val) => {
-      this.options = val;
-    });
+    this.initGetAutoCompleteData();
   }
 
   search() {
@@ -34,5 +32,10 @@ export class SearchComponent implements OnInit {
         '_blank'
       );
     }
+  }
+  private initGetAutoCompleteData() {
+    this.autoComplete.getAutoCompleteData().subscribe((val) => {
+      this.options = val;
+    });
   }
 }
