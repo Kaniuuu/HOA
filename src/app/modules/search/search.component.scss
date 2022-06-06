@@ -5,16 +5,20 @@
   height: 100vh;
   background-color: lightgrey;
 }
+
 .search-card {
   width: 400px;
 }
+
 .search-card-title {
   display: flex;
   justify-content: center;
 }
+
 .search-card-form {
   width: 100%;
 }
+
 .search-card-actions {
   display: flex;
   flex-direction: row-reverse;
