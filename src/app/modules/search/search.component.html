@@ -22,7 +22,14 @@
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions class="search-card-actions">
-      <button mat-raised-button color="primary">Search!</button>
+      <button
+        (click)="search()"
+        class="button"
+        mat-raised-button
+        color="primary"
+      >
+        Search!
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

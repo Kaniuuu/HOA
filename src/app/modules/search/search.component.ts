@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { AutoCompleteService } from './resources/services/auto-complete.service';
-import { map, Observable, of, startWith } from 'rxjs';
+import { map, startWith } from 'rxjs';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -25,5 +25,13 @@ export class SearchComponent implements OnInit {
     this.autoComplete.getAutoCompleteData().subscribe((val) => {
       this.options = val;
     });
+  }
+  search() {
+    if (this.searchControl.value != '') {
+      window.open(
+        'https://www.google.com/search?q=' + this.searchControl.value,
+        '_blank'
+      );
+    }
   }
 }
