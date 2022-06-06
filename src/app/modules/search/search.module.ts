@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AutoCompleteService } from './resources/services/auto-complete.service';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [SearchComponent],
   imports: [
